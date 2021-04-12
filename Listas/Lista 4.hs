@@ -23,11 +23,11 @@ andLista (a:x) = a && andLista x
 
 concatLista :: [[Int]] -> [Int]
 concatLista [] = []
-concatLista (a:xs) = a ++ concatLista xs
+concatLista ((a:x)) = (a) ++ (concatLista x)
 
 inverteLista :: [Int] -> [Int]
 inverteLista [] = []
-inverteLista (a:x) = inverteLista x ++ [a]
+inverteLista (a:x) = (inverteLista x) ++ [a]
 
 somaLista :: [Int] -> Int
 somaLista [] = 0

@@ -17,18 +17,10 @@ retira _ [] = []
 retira 0 l = l
 retira a (x:xs) = retira (a-1) (xs) 
 
-mediaLista :: [Int] -> Float
-mediaLista [] = 0
-mediaLista [a] = fromIntegral(a)
-mediaLista l = (fromIntegral(somaElem l))/(fromIntegral(tamanho l))
-
-tamanho :: [Int] -> Int
-tamanho [] = 0
-tamanho (x:xs) = 1 + tamanho xs
-
-somaElem :: [Int] -> Int
-somaElem [] = 0
-somaElem (x:xs) = x + somaElem xs
+--mediaLista :: [Int] -> Float
+--mediaLista [] = 0
+--mediaLista [a] = a
+--mediaLista l = (fromIntegral(somaElem l))/(fromIntegral(tamanho l))
 
 pegaMaiores :: Int -> [Int] -> [Int]
 pegaMaiores _ [] = []
@@ -46,7 +38,7 @@ concatena :: [a] -> [a] -> [a]
 concatena [] [] = []
 concatena [] l = l
 concatena l [] = l
-concatena (m:xs) l = (m:xs) ++ l
+concatena (m:xs) l = m : concatena xs l
 
 intercala :: [Int] -> [Int] -> [Int]
 intercala _ [] = []
